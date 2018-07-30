@@ -5,9 +5,9 @@
   <subtitle>Just a blog.</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://zpf-smile.github.io/"/>
-  <updated>2018-07-30T08:19:50.016Z</updated>
-  <id>http://zpf-smile.github.io/</id>
+  <link href="https://kiminonawa.me/"/>
+  <updated>2018-07-30T08:26:01.351Z</updated>
+  <id>https://kiminonawa.me/</id>
   
   <author>
     <name>ZPF</name>
@@ -18,32 +18,19 @@
   
   <entry>
     <title>测试文章</title>
-    <link href="http://zpf-smile.github.io/2018/07/30/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/"/>
-    <id>http://zpf-smile.github.io/2018/07/30/测试文章/</id>
+    <link href="https://kiminonawa.me/2018/07/30/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/"/>
+    <id>https://kiminonawa.me/2018/07/30/测试文章/</id>
     <published>2018-07-30T08:19:49.000Z</published>
-    <updated>2018-07-30T08:19:50.016Z</updated>
+    <updated>2018-07-30T08:26:01.351Z</updated>
     
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://zpf-smile.github.io/2018/06/30/hello-world/"/>
-    <id>http://zpf-smile.github.io/2018/06/30/hello-world/</id>
-    <published>2018-06-30T08:19:49.000Z</published>
-    <updated>2018-07-30T08:22:01.415Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<p>test<br>test<br>test<br>test</p><iframe width="560" height="315" src="https://www.youtube.com/embed/SDwps35hQbg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+        &lt;p&gt;test&lt;br&gt;test&lt;br&gt;test&lt;br&gt;test&lt;/p&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/SDwps35hQbg&quot; frameborder=&quot;0&quot; allow=&quot;
       
     
     </summary>
